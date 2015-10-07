@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
+//Blabla
 public class Tab1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -45,14 +46,14 @@ public class Tab1 extends Fragment {
                 double firstParam;
                 double secondParam;
 
-                if (editText1.getText().toString() == null || editText1.getText().toString().isEmpty()) {
+                if (editText1.getText().toString().isEmpty()) {
                     editText1.setError(getString(R.string.errorMessage));
-                    if (editText2.getText().toString() == null || editText2.getText().toString().isEmpty()) {
+                    if (editText2.getText().toString().isEmpty()) {
                         editText2.setError(getString(R.string.errorMessage));
                     }
                 } else {
                     firstParam = Double.parseDouble(editText1.getText().toString());
-                    if (editText2.getText().toString() == null || editText2.getText().toString().isEmpty()) {
+                    if (editText2.getText().toString().isEmpty()) {
                         editText2.setError(getString(R.string.errorMessage));
                     } else {
                         secondParam = Double.parseDouble(editText2.getText().toString());
