@@ -12,20 +12,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
-/**
- * Created by KatholnigS on 23.09.2015.
- */
-
 public class BinomActivity extends AppCompatActivity {
 
-    // Declaring Your View and Variables
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
+    //Hier wird die Beschriftung der Tabs für das TabMenü festgelegt
     CharSequence titles[] = {"First", "Second", "Third"};
     int numbOfTabs = 3;
-    boolean showAlert;
+
     String showAlertKey = "com.easy_binom.easybin.showAlert";
 
     @Override
@@ -34,14 +29,15 @@ public class BinomActivity extends AppCompatActivity {
         ThemeChanger.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_binom);
 
+        // Lade shared Preferences für die Anzeige von Disclaimer Toast
+        // Wird im Moment noch von FirstActivity bei jedem Start auf true gesetzt.
         SharedPreferences prefs = getSharedPreferences(
                 "com.easy_binom.app", Context.MODE_PRIVATE);
+        boolean showAlert = prefs.getBoolean(showAlertKey, true);
 
-        showAlert = prefs.getBoolean(showAlertKey, true);
-
-        //Custom Toast mit Material Design. SharedPreferences werden in FirstActivity gesetzt,
-        //damit Toast nur bei Programmstart gezeigt wird.
-        if (showAlert == true) {
+        // Custom Toast mit Material Design. SharedPreferences werden in FirstActivity gesetzt,
+        // damit Toast nur bei Programmstart und nicht bei OnCreate von Activity gestartet wird.
+        if (showAlert) {
             AlertDialog.Builder builder = new AlertDialog.Builder(BinomActivity.this, R.style.MyAlertDialogStyle);
             builder.setTitle("DISCLAIMER");
             builder.setMessage(R.string.lorem);
@@ -59,18 +55,19 @@ public class BinomActivity extends AppCompatActivity {
             editor.commit();
         }
 
-        // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
+        // Erstellen des ViewPagerAdapter und übergabe des Fragment Managers, Titel der Tabs und die Anzahl der Tabs.
         adapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, numbOfTabs);
 
-        // Assigning ViewPager View and setting the adapter
+        // Zuweisen der ViewPager Views und setzen des Adapters
         pager = (ViewPager) findViewById(R.id.pager);
         pager.setAdapter(adapter);
 
-        // Assiging the Sliding Tab Layout View
+        // Zuweisen der SlidingTabLayout View. SetDistributeEvenly(true) verteilt den Raum der Tabs
+        // gleichmäßig in der verfügbaren Breite.
         tabs = (SlidingTabLayout) findViewById(R.id.tabs);
-        tabs.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
+        tabs.setDistributeEvenly(true);
 
-        // Setting Custom Color for the Scroll bar indicator of the Tab View
+        // Setze eine spezifische Farbe für den Tab Indikator
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
             public int getIndicatorColor(int position) {
@@ -78,15 +75,14 @@ public class BinomActivity extends AppCompatActivity {
             }
         });
 
-        // Setting the ViewPager For the SlidingTabsLayout
+        // Setze nun den ViewPager für die tabs
         tabs.setViewPager(pager);
 
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Zeige Menü mithilfe von MenuInflater wenn Menüelemente vorhanden.
         getMenuInflater().inflate(R.menu.menu_main, menu);
 
         return true;
@@ -94,23 +90,30 @@ public class BinomActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        // Hier werden klicks auf die Action Bar Elemente behandelt. Die Action Bar behandelt klicks
+        // automatisch wenn keine parent activity in der AndroidManifest.xml angegeben wurde.
+        // Somit ist kein OnClickListener nötig.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
+        // Unterscheide die Menüaktionen.
         if (id == R.id.action_settings) {
+            // Wurde "Über uns" im Menü gewählt, wird nun diese Activity geöffnet
+            // finish Methode von BinomActivity wird nicht aufgerufen um Sie auf dem Stack zu lassen.
             Intent mainIntent = new Intent(BinomActivity.this, AboutUsActivity.class);
             startActivity(mainIntent);
             return true;
         } else if (id == R.id.action_settings2) {
+            // Wurde "Mario Werner" im Menü gewählt, werden nun über die ThemeChanger Klasse die
+            // Änderungen der Akzentfarber eingeleitet.
             ThemeChanger.changeToTheme(this, ThemeChanger.THEME_SECOND);
             return true;
         } else if (id == R.id.action_settings3) {
+            // Wurde "Steve Katholnig" im Menü gewählt, werden nun über die ThemeChanger Klasse die
+            // Änderungen der Akzentfarber eingeleitet.
             ThemeChanger.changeToTheme(this, ThemeChanger.THEME_DEFAULT);
             return true;
         } else if (id == R.id.action_info) {
+            // Wurde der Info Button in der Action Bar betätigt, wird die zugehörige Activity gestartet
+            // finish Methode von BinomActivity wird nicht aufgerufen um Sie auf dem Stack zu lassen.
             Intent mainIntent = new Intent(BinomActivity.this, InfoActivity.class);
             startActivity(mainIntent);
             return true;

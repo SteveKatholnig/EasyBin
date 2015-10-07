@@ -5,9 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-/**
- * Created by KatholnigS on 24.09.2015.
- */
 public class AboutUsActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +15,7 @@ public class AboutUsActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Zeige Menü mithilfe von MenuInflater wenn Menüelemente vorhanden.
         getMenuInflater().inflate(R.menu.about_us, menu);
 
         return true;
@@ -26,12 +23,12 @@ public class AboutUsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        // Hier werden klicks auf die Action Bar Elemente behandelt. Die Action Bar behandelt klicks
+        // automatisch wenn keine parent activity in der AndroidManifest.xml angegeben wurde.
+        // Somit ist kein OnClickListener nötig.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        // Wenn Zurückbutton geklickt wurde, wird finish Methode der Activity aufgerufen
         if (id == R.id.action_back) {
             finish();
             return true;
