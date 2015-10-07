@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="primary" type="color">#3F51B5</item>
+    <item name="primary_dark" type="color">#3949AB</item>
+    <item name="tabsScrollColor" type="color">#FFFFFF</item>
+    <item name="accent" type="color">#FF6F00</item>
+    <item name="background_light" type="color">#E8EAF6</item>
+    <item name="lightColor" type="color">#C5CAE9</item>
+    <item name="actionBarTextColor" type="color">#FFFFFF</item>
+
+    <item name="primary_second" type="color">#E91E63</item>
+    <item name="primary_dark_second" type="color">#D81B60</item>
+    <item name="tabsScrollColor_second" type="color">#FFFFFF</item>
+    <item name="accent_second" type="color">#9C27B0</item>
+    <item name="lightColor_second" type="color">#FCE4EC</item>
+    <item name="actionBarTextColor_second" type="color">#FFFFFF</item>
+</resources>

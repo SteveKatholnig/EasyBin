@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">EasyBinom</string>
+
+    <string name="action_settings">About us</string>
+    <string name="action_settings2">Mario Werner</string>
+    <string name="action_settings3">Steve Katholnig</string>
+    <string name="action_back">Back</string>
+    <string name="action_info">Info</string>
+
+    <string name="txtView1">(xa+yb)²</string>
+    <string name="txtView2">(xa-yb)²</string>
+    <string name="txtView3">(xa+yb)(xa-yb)</string>
+
+    <string name="errorMessage">Please enter a valid number!</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, STEVE IST DER BESTE sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. MARIO Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
+
+    <string name="result">Result</string>
+    <string name="swipeDesc">Swipe down to the bottom to clear all fields!</string>
+</resources>
