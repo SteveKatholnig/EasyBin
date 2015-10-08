@@ -25,7 +25,7 @@
         android:layout_marginLeft="28dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="83dp"
-        android:text="Input for x:"
+        android:text="Input for a:"
         android:textSize="20sp" />
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_alignStart="@+id/textView"
         android:layout_below="@+id/textView"
         android:layout_marginTop="26dp"
-        android:text="Input for y:"
+        android:text="Input for b:"
         android:textSize="20sp" />
 
     <EditText

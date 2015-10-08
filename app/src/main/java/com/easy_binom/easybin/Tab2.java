@@ -45,18 +45,18 @@ public class Tab2 extends Fragment {
                 double firstParam;
                 double secondParam;
 
-                if (editText1.getText().toString() == null || editText1.getText().toString().isEmpty()) {
+                if (editText1.getText().toString().isEmpty()) {
                     editText1.setError(getString(R.string.errorMessage));
-                    if (editText2.getText().toString() == null || editText2.getText().toString().isEmpty()) {
+                    if (editText2.getText().toString().isEmpty()) {
                         editText2.setError(getString(R.string.errorMessage));
                     }
                 } else {
                     firstParam = Double.parseDouble(editText1.getText().toString());
-                    if (editText2.getText().toString() == null || editText2.getText().toString().isEmpty()) {
+                    if (editText2.getText().toString().isEmpty()) {
                         editText2.setError(getString(R.string.errorMessage));
                     } else {
                         secondParam = Double.parseDouble(editText2.getText().toString());
-                        editor.putString(showResultKey, Binom.firstBinom(firstParam, secondParam));
+                        editor.putString(showResultKey, Binom.secondBinom(firstParam, secondParam));
                         editor.commit();
                         Intent mainIntent = new Intent(getActivity(), ResultActivity.class);
                         startActivity(mainIntent);

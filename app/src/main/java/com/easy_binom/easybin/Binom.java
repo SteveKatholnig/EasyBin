@@ -20,7 +20,7 @@ public class Binom {
             b = round(y, 1);
         }
 
-        return "This was the first binom!" + "\n" + "\n" + "Your input was:" + "\n" + "x= " + a + "  y= " + b + "\n" + "\n" + "Result:" + "\n" + a * a + "a² + " + 2 * a * b + "ab + " + b * b + "b²";
+        return "This was the first binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + a + "  b= " + b + "\n" + "\n" + "Result for:" + "\n" + a + "² + " + "2*" + a + "*" + b + " + " + b + "²" + " = " + ((a * a) + (2 * a * b) + (b * b));
 
     }
 
@@ -39,7 +39,7 @@ public class Binom {
             b = round(y, 1);
         }
 
-        return "This was the second binom!" + "\n" + "\n" + "Your input was:" + "\n" + "x= " + a + "  y= " + b + "\n" + "\n" + "Result:" + "\n" + a * a + "a² - " + 2 * a * b + "ab + " + b * b + "b²" + "\n";
+        return "This was the second binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + a + "  b= " + b + "\n" + "\n" + "Result for:" + "\n" + a + "² - " + "2*" + a + "*" + b + " + " + b + "²" + " = " + ((a * a) - (2 * a * b) + (b * b));
 
     }
 
@@ -58,7 +58,7 @@ public class Binom {
             b = round(y, 1);
         }
 
-        return "This was the third binom!" + "\n" + "\n" + "Your input was:" + "\n" + "x= " + a + "  y= " + b + "\n" + "\n" + "Result:" + "\n" + a * a + "a² - " + b * b + "b²";
+        return "This was the third binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + a + "  b= " + b + "\n" + "\n" + "Result for:" + "\n" + a + "² - " + b + "²" + " = " + ((a * a) - (b * b));
 
     }
 
