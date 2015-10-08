@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
-        android:text="@string/lorem"
+        android:text="@string/binomDesc"
         android:textSize="15sp" />
 
 </LinearLayout>

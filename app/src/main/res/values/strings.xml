@@ -16,4 +16,19 @@
 
     <string name="result">Result</string>
     <string name="swipeDesc">Swipe down to the bottom to clear all fields!</string>
+    <string name="binomDesc">Erste binomische Formel
+
+Für alle, die Klammern ausmultiplizieren können, ist die erste binomische Formel eigentlich nichts neues, auch wenn sie auf den ersten Blick abschreckend wirkt. Denn diese lautet:
+
+
+•1. Binomische Formel: ( a + b )2 = a2 + 2ab + b2
+•Herleitung: ( a + b )2 = ( a + b ) · ( a + b ) = a2 + ab + ba + b2 = a2 + 2ab + b2
+
+
+ Die Herleitung ist für alle diejenigen interessant, die sich Fragen: "Woher kommt das eigentlich?" Alle anderen benötigen nur den mathematischen Ausdruck, den ich fett markiert habe. Die Herleitung zeigt einfach nur, wie man die Klammern ausmultipliziert ( was wir im oben verlinkten Abschnitt bereits erklärt haben ). Ein paar Beispiele demonstrieren, wie man die Formel anwendet:
+
+
+•( 3 + 4 )2 = 32 + 2 · 3 · 4 + 42 = 9 + 24 + 16 = 49
+•( 1 + 2 )2 =12 + 2 · 1 · 2 + 22 =1 + 4 + 4 = 9
+</string>
 </resources>
