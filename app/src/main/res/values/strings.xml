@@ -2,8 +2,9 @@
     <string name="app_name">EasyBinom</string>
 
     <string name="action_settings">About us</string>
-    <string name="action_settings2">Mario Werner</string>
-    <string name="action_settings3">Steve Katholnig</string>
+    <string name="action_settings4">Nullstellen</string>
+    <string name="action_settings2">Female</string>
+    <string name="action_settings3">Male</string>
     <string name="action_back">Back</string>
     <string name="action_info">Info</string>
 

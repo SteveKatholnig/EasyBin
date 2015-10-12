@@ -111,6 +111,12 @@ public class BinomActivity extends AppCompatActivity {
             // Änderungen der Akzentfarber eingeleitet.
             ThemeChanger.changeToTheme(this, ThemeChanger.THEME_DEFAULT);
             return true;
+        } else if (id == R.id.action_settings4) {
+            // Wurde "Steve Katholnig" im Menü gewählt, werden nun über die ThemeChanger Klasse die
+            // Änderungen der Akzentfarber eingeleitet.
+            Intent mainIntent = new Intent(BinomActivity.this, NullActivity.class);
+            startActivity(mainIntent);
+            return true;
         } else if (id == R.id.action_info) {
             // Wurde der Info Button in der Action Bar betätigt, wird die zugehörige Activity gestartet
             // finish Methode von BinomActivity wird nicht aufgerufen um Sie auf dem Stack zu lassen.
