@@ -7,58 +7,77 @@ public class Binom {
 
     public static String firstBinom(double x, double y) {
 
-        double a = 0;
-        double b = 0;
+        double a = x;
+        double b = y;
 
         //Prüfe ob die eingaben größer oder kleiner den zulässigen werten für double sind.
-        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE)
-            a = 0.0;
-        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE)
-            b = 0.0;
+        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE){
+            x = 0.0;
+        }
+        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE){
+            y = 0.0;
+        }
         else{
             a = round(x, 1);
             b = round(y, 1);
         }
 
-        return "This was the first binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + a + "  b= " + b + "\n" + "\n" + "Result for:" + "\n" + a + "² + " + "2*" + a + "*" + b + " + " + b + "²" + " = " + ((a * a) + (2 * a * b) + (b * b));
+        double resa = a*a;
+        double resb = 2*a*b;
+        double resc = b*b;
+
+
+        return "This was the first binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² + " + resb + "x + " + resc + "\n" + Abc.formel(resa,resb,resc);
 
     }
 
     public static String secondBinom(double x, double y) {
 
-        double a = 0;
-        double b = 0;
+        double a = x;
+        double b = y;
 
         //Prüfe ob die eingaben größer oder kleiner den zulässigen werten für double sind.
-        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE)
-            a = 0.0;
-        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE)
-            b = 0.0;
+        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE){
+            x = 0.0;
+        }
+        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE){
+            y = 0.0;
+        }
         else{
             a = round(x, 1);
             b = round(y, 1);
         }
 
-        return "This was the second binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + a + "  b= " + b + "\n" + "\n" + "Result for:" + "\n" + a + "² - " + "2*" + a + "*" + b + " + " + b + "²" + " = " + ((a * a) - (2 * a * b) + (b * b));
+        double resa = a*a;
+        double resb = 2*a*b;
+        double resc = b*b;
+
+        return "This was the second binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² - " + resb + "x + " + resc + "\n" + Abc.formel(resa,-resb,resc);
 
     }
 
     public static String thirdBinom(double x, double y) {
 
-        double a = 0;
-        double b = 0;
+        double a = x;
+        double b = y;
 
         //Prüfe ob die eingaben größer oder kleiner den zulässigen werten für double sind.
-        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE)
-            a = 0.0;
-        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE)
-            b = 0.0;
+        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE){
+            x = 0.0;
+        }
+        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE){
+            y = 0.0;
+        }
         else{
             a = round(x, 1);
             b = round(y, 1);
         }
 
-        return "This was the third binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + a + "  b= " + b + "\n" + "\n" + "Result for:" + "\n" + a + "² - " + b + "²" + " = " + ((a * a) - (b * b));
+        double resa = a*a;
+        double resb = 0;
+        double resc = b*b;
+
+        return "This was the third binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² - " + resc + "\n" + Abc.formel(resa,resb,-resc);
 
     }
 

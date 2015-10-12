@@ -8,9 +8,9 @@
     <string name="action_back">Back</string>
     <string name="action_info">Info</string>
 
-    <string name="txtView1">(a+b)²</string>
-    <string name="txtView2">(a-b)²</string>
-    <string name="txtView3">(a+b)(a-b)</string>
+    <string name="txtView1">(ax+b)²</string>
+    <string name="txtView2">(ax-b)²</string>
+    <string name="txtView3">(ax+b)(ax-b)</string>
 
     <string name="errorMessage">Please enter a valid number!</string>
     <string name="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, STEVE IST DER BESTE sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. MARIO Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
