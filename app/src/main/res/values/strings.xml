@@ -24,9 +24,9 @@
     <li>2. Binomische Formel: ( a - b )² = a² - 2ab + b²</li>\n<li>Herleitung: ( a - b )² = ( a - b ) · ( a - b ) = a² - ab -ba + b² = a² - 2ab + b²</li>\n\n
     <b>Dritte Binomische Formel:</b>\nKommen wir zur dritten - und damit letzten - binomischen Formel. Diese hilft zwei Klammern zu multiplizieren, die wie folgt aussehen:\n
     <li>3.Binomische Formel: ( a + b ) ( a - b ) = a² - b²</li>\n<li>Herleitung: ( a + b ) ( a - b ) = a² -ab + ba -b² = a² - b²</li>\n\n
-    <b>Zweite Binomische Formel:</b>\nDie zweite binomische Formel sieht sehr ähnlich aus. Nur hier findet sich nun ein negatives Vorzeichen. Es folgt wieder die Formel samt Herleitung:\n
-    <li>2. Binomische Formel: ( a - b )² = a² - 2ab + b²</li>\n<li>Herleitung: ( a - b )² = ( a - b ) · ( a - b ) = a² - ab -ba + b² = a² - 2ab + b²</li>\n\n
-    <b>Dritte Binomische Formel:</b>\nKommen wir zur dritten - und damit letzten - binomischen Formel. Diese hilft zwei Klammern zu multiplizieren, die wie folgt aussehen:\n
-    <li>3.Binomische Formel: ( a + b ) ( a - b ) = a² - b²</li>\n<li>Herleitung: ( a + b ) ( a - b ) = a² -ab + ba -b² = a² - b²</li>\n\n
+    <b>ABC-Formel:</b>\nDie ABC-Formel, auch Mitternachtsformel genannt, wird zur Berechnung von Nullstellen bei quadratischen Gleichungen \n (F(x) = ax2 + bx + c) verwendet.\n
+    Sie ähnelt stark der PQ-Formel. Beide Formeln führen zu demselben Ergebnis. \n
+    Die ABC-Formel lautet: X1/2 = (-b± √(b^2-4ac))/2a \n
+    Die PQ-Formel lautet: X1/2 = (-p)/2  ± √((p/2)^2-q)\n\n
     </string>
 </resources>

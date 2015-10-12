@@ -6,9 +6,13 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Slide;
+import android.transition.Transition;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class NullActivity extends AppCompatActivity {
     String themeKey = "com.easy_binom.easybin.themeKey";
@@ -16,8 +20,10 @@ public class NullActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         ThemeChanger.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_null);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab1);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +52,10 @@ public class NullActivity extends AppCompatActivity {
 
         // Wenn Zurückbutton geklickt wurde, wird finish Methode der Activity aufgerufen
         if (id == R.id.action_back) {
+            Intent mainIntent = new Intent(NullActivity.this, BinomActivity.class);
+            startActivity(mainIntent);
             finish();
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
             return true;
         }
         // Wurde der Info Button in der Action Bar betätigt, wird die zugehörige Activity gestartet

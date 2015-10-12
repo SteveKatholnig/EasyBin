@@ -1,5 +1,6 @@
 package com.easy_binom.easybin;
 
+import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,8 +10,12 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
+import android.transition.Transition;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class BinomActivity extends AppCompatActivity {
 
@@ -27,8 +32,10 @@ public class BinomActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         ThemeChanger.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_binom);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         // Lade shared Preferences für die Anzeige von Disclaimer Toast
         // Wird im Moment noch von FirstActivity bei jedem Start auf true gesetzt.
@@ -115,6 +122,8 @@ public class BinomActivity extends AppCompatActivity {
         } else if (id == R.id.action_settings4) {
             Intent mainIntent = new Intent(BinomActivity.this, NullActivity.class);
             startActivity(mainIntent);
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+            finish();
             return true;
         } else if (id == R.id.action_info) {
             // Wurde der Info Button in der Action Bar betätigt, wird die zugehörige Activity gestartet
