@@ -44,6 +44,7 @@ public class FirstActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         // Setzte showAlertKey auf true um Disclaimer in BinomActivity anzuzeigen.
         editor.putBoolean(showAlertKey, true);
+
         // Setzte showResultKey auf isEmpty()= true um einen definierten Zustand herzustellen.
         // Diese SharedPreference wird in den Tabs verwendet um mit der ResultActivity zu kommunizieren.
         editor.putString(showResultKey, "");

@@ -20,6 +20,7 @@ public class BinomActivity extends AppCompatActivity {
     //Hier wird die Beschriftung der Tabs für das TabMenü festgelegt
     CharSequence titles[] = {"First", "Second", "Third"};
     int numbOfTabs = 3;
+    int usedTheme = 0;
 
     String showAlertKey = "com.easy_binom.easybin.showAlert";
 
@@ -112,8 +113,6 @@ public class BinomActivity extends AppCompatActivity {
             ThemeChanger.changeToTheme(this, ThemeChanger.THEME_DEFAULT);
             return true;
         } else if (id == R.id.action_settings4) {
-            // Wurde "Steve Katholnig" im Menü gewählt, werden nun über die ThemeChanger Klasse die
-            // Änderungen der Akzentfarber eingeleitet.
             Intent mainIntent = new Intent(BinomActivity.this, NullActivity.class);
             startActivity(mainIntent);
             return true;

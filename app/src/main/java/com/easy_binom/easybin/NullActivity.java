@@ -1,6 +1,8 @@
 package com.easy_binom.easybin;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -9,9 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class NullActivity extends AppCompatActivity {
+    String themeKey = "com.easy_binom.easybin.themeKey";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ThemeChanger.onActivityCreateSetTheme(this);
         setContentView(R.layout.activity_null);
 
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab1);
