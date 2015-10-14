@@ -123,7 +123,6 @@ public class BinomActivity extends AppCompatActivity {
             Intent mainIntent = new Intent(BinomActivity.this, NullActivity.class);
             startActivity(mainIntent);
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
-            finish();
             return true;
         } else if (id == R.id.action_info) {
             // Wurde der Info Button in der Action Bar betätigt, wird die zugehörige Activity gestartet

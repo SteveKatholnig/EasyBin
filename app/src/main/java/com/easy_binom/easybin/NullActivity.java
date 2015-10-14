@@ -10,12 +10,14 @@ import android.transition.Slide;
 import android.transition.Transition;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 
 public class NullActivity extends AppCompatActivity {
-    String themeKey = "com.easy_binom.easybin.themeKey";
+    String showResultKey = "com.easy_binom.easybin.resultKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +27,62 @@ public class NullActivity extends AppCompatActivity {
         setContentView(R.layout.activity_null);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+        final EditText editText1 = (EditText) findViewById(R.id.editText);
+        final EditText editText2 = (EditText) findViewById(R.id.editText2);
+        final EditText editText3 = (EditText) findViewById(R.id.editText3);
+
+        View view = this.findViewById(R.id.entire_view);
+
+        view.setOnTouchListener(new OnSwipeTouchListener(this.getBaseContext()){
+            public void onSwipeBottom() {
+                editText1.setText("");
+                editText2.setText("");
+                editText3.setText("");
+            }
+
+            public boolean onTouch(View v, MotionEvent event) {
+                return gestureDetector.onTouchEvent(event);
+            }
+        });
+
+        SharedPreferences prefs = this.getSharedPreferences(
+                "com.easy_binom.app", Context.MODE_PRIVATE);
+        final SharedPreferences.Editor editor = prefs.edit();
+
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab1);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //TODO Die Nullstellenberechnung
+                double firstParam;
+                double secondParam;
+                double thirdParam;
+
+                if (editText1.getText().toString().isEmpty()) {
+                    editText1.setError(getString(R.string.errorMessage));
+                    if (editText2.getText().toString().isEmpty()) {
+                        editText2.setError(getString(R.string.errorMessage));
+                        if (editText3.getText().toString().isEmpty()) {
+                            editText3.setError(getString(R.string.errorMessage));
+                        }
+                    }
+                } else {
+                    firstParam = Double.parseDouble(editText1.getText().toString());
+                    if (editText2.getText().toString().isEmpty()) {
+                        editText2.setError(getString(R.string.errorMessage));
+                    } else {
+                        secondParam = Double.parseDouble(editText2.getText().toString());
+                        if (editText3.getText().toString().isEmpty()) {
+                            editText3.setError(getString(R.string.errorMessage));
+                        } else {
+                            thirdParam = Double.parseDouble((editText3.getText().toString()));
+                            editor.putString(showResultKey, "Your input was: " + editText1.getText().toString() +  "x² + " + editText2.getText().toString() + "x + " + editText3.getText().toString() + "\n" + Abc.formel(firstParam, secondParam, thirdParam));
+                            editor.commit();
+                            Intent mainIntent = new Intent(NullActivity.this, ResultActivity.class);
+                            startActivity(mainIntent);
+                        }
+                    }
+                }
 
             }
         });
