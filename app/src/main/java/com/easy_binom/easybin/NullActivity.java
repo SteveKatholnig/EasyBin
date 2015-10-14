@@ -33,7 +33,7 @@ public class NullActivity extends AppCompatActivity {
 
         View view = this.findViewById(R.id.entire_view);
 
-        view.setOnTouchListener(new OnSwipeTouchListener(this.getBaseContext()){
+        view.setOnTouchListener(new OnSwipeTouchListener(this.getBaseContext()) {
             public void onSwipeBottom() {
                 editText1.setText("");
                 editText2.setText("");
@@ -119,5 +119,14 @@ public class NullActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent mainIntent = new Intent(NullActivity.this, BinomActivity.class);
+        startActivity(mainIntent);
+        finish();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        super.onBackPressed();
     }
 }

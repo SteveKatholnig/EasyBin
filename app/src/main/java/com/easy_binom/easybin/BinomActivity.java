@@ -122,6 +122,7 @@ public class BinomActivity extends AppCompatActivity {
         } else if (id == R.id.action_settings4) {
             Intent mainIntent = new Intent(BinomActivity.this, NullActivity.class);
             startActivity(mainIntent);
+            finish();
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
             return true;
         } else if (id == R.id.action_info) {
