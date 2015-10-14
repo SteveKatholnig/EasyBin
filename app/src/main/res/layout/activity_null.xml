@@ -20,7 +20,13 @@
         android:id="@+id/ABC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/abc" />
+        android:src="@drawable/abc"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="50sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:layout_marginBottom="50sp"/>
 
     <EditText
         android:id="@+id/editText"
@@ -32,7 +38,8 @@
         android:hint="@string/var1"
         android:textColor="@android:color/black"
         android:layout_margin="10sp"
-        android:textAppearance="?android:attr/textAppearanceSmall"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="numberSigned" />
 
     <EditText
         android:id="@+id/editText2"
@@ -44,7 +51,8 @@
         android:hint="@string/var2"
         android:textColor="@android:color/black"
         android:layout_margin="10sp"
-        android:textAppearance="?android:attr/textAppearanceSmall"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="numberSigned"/>
 
     <EditText
         android:id="@+id/editText3"
@@ -57,7 +65,8 @@
         android:hint="@string/var3"
         android:textColor="@android:color/black"
         android:layout_margin="10sp"
-        android:textAppearance="?android:attr/textAppearanceSmall"/>
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="numberSigned"/>
 
     <TextView
         android:layout_width="wrap_content"
