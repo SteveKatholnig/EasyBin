@@ -29,4 +29,7 @@
     Die ABC-Formel lautet: X1/2 = (-b± √(b^2-4ac))/2a \n
     Die PQ-Formel lautet: X1/2 = (-p)/2  ± √((p/2)^2-q)\n\n
     </string>
+    <string name="var1">a= </string>
+    <string name="var2">b= </string>
+    <string name="var3">c= </string>
 </resources>

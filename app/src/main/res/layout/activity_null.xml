@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    android:gravity="center">
+    android:background="@color/background_light">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab1"
@@ -15,14 +16,59 @@
         android:layout_marginRight="@dimen/fab_button_margin_right"
         android:src="@drawable/fab_ic_add" />
 
-    <TextView
-        android:id="@+id/resultView"
+    <ImageView
+        android:id="@+id/ABC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        android:text="@string/nullstellen"
-        android:textSize="20sp"
-        android:layout_gravity="center" />
+        android:src="@drawable/abc" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ABC"
+        android:hint="@string/var1"
+        android:textColor="@android:color/black"
+        android:layout_margin="10sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText"
+        android:hint="@string/var2"
+        android:textColor="@android:color/black"
+        android:layout_margin="10sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="47dp"
+        android:hint="@string/var3"
+        android:textColor="@android:color/black"
+        android:layout_margin="10sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:hint="Ergebnis"
+        android:text="Ergebnis: "
+        android:layout_margin="10sp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
 
 
 </RelativeLayout>
