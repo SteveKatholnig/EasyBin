@@ -29,5 +29,6 @@
     <string name="binomDesc3"><b>Dritte Binomische Formel:</b>\nKommen wir zur dritten - und damit letzten - binomischen Formel. Diese hilft zwei Klammern zu multiplizieren, die wie folgt aussehen:</string>
     <string name="binomDesc4"><b>ABC-Formel:</b>\nDie ABC-Formel, auch Mitternachtsformel genannt, wird zur Berechnung von Nullstellen bei quadratischen Gleichungen \n (F(x) = ax² + bx + c) verwendet.\n
     Sie ähnelt stark der PQ-Formel. Beide Formeln führen zu demselben Ergebnis.</string>
+    <string name="binomDesc5"><b>Zu der Nullstellenberechnung: \n</b>Um eine negative Zahl in die Zahlenfelder der Nullstellenberechnung eintragen zu können, muss der ".-" Button zweimal schnell angetippt werden. \n</string>
 
 </resources>
