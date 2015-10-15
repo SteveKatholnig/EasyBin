@@ -25,7 +25,7 @@ public class Binom {
         double resc = b * b;
 
 
-        return "This was the first binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² + " + resb + "x + " + resc + "\n" + Abc.formel(resa, resb, resc);
+        return "This was the first binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + round(resa,1) + "x² + " + round(resb,1) + "x + " + round(resc,1) + "\n" + Abc.formel(resa, resb, resc);
 
     }
 
@@ -48,7 +48,7 @@ public class Binom {
         double resb = 2 * a * b;
         double resc = round(b * b, 1);
 
-        return "This was the second binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² - " + resb + "x + " + resc + "\n" + Abc.formel(resa, -resb, resc);
+        return "This was the second binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + round(resa,1) + "x² - " + round(resb,1) + "x + " + round(resc,1) + "\n" + Abc.formel(resa, -resb, resc);
 
     }
 
@@ -71,7 +71,7 @@ public class Binom {
         double resb = 0;
         double resc = round(b * b, 1);
 
-        return "This was the third binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² - " + resc + "\n" + Abc.formel(resa, resb, -resc);
+        return "This was the third binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + round(resa,1) + "x² - " + round(resc,1) + "\n" + Abc.formel(resa, resb, -resc);
 
     }
 
