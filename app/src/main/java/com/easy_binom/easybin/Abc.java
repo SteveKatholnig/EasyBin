@@ -22,14 +22,14 @@ public class Abc {
     public static String formel(double a, double b, double c) {
         try{
             if (teilergebnis(a, b, c) < 0) {
-                return ("Keine Nullstellen vorhanden!" );
+                return ("No root available!" );
             }
             if (teilergebnis(a, b, c) == 0) {
-                return "Nullstelle: " + ergebnis1(teilergebnis(a, b, c), a, b);
+                return "Root: \n" + ergebnis1(teilergebnis(a, b, c), a, b);
             }
-            return "Nullstellen: " + ergebnis1(teilergebnis(a, b, c), a, b) + "  " + ergebnis2(teilergebnis(a, b, c), a, b);
+            return "Roots: \n" + ergebnis1(teilergebnis(a, b, c), a, b) + "  " + ergebnis2(teilergebnis(a, b, c), a, b);
         }catch (NumberFormatException e){
-            return "Die Lösung überschreitet den Maximalwert des Datentyps double";
+            return "Result is bigger then double";
         }
     }
 }
