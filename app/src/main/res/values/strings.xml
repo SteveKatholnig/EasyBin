@@ -22,7 +22,7 @@
     <string name="var3">c= </string>
 
     <string name="errorMessage">Please enter a valid number!</string>
-    <string name="numberFormatError">Die Zahl isch zu groß Kerle! Konsti ist doof</string>
+    <string name="numberFormatError">Nur Konstis geben zu große Zahlen ein. Bugfix by Konsti</string>
 
     <string name="disclaimer">Diese App ist nur zu Testzwecken als Projekt an der DHBW entwickelt worden. Sie macht keinen Sinn aber sieht schön aus.</string>
     <string name="swipeDesc">Swipe down to the bottom to clear all fields!</string>
