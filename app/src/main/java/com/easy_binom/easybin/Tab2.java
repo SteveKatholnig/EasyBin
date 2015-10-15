@@ -58,7 +58,7 @@ public class Tab2 extends Fragment {
                         try{
                             firstParam = Double.parseDouble(editText1.getText().toString());
                             secondParam = Double.parseDouble(editText2.getText().toString());
-                            editor.putString(showResultKey, Binom.firstBinom(firstParam, secondParam));
+                            editor.putString(showResultKey, Binom.secondBinom(firstParam, secondParam));
                             editor.commit();
                             Intent mainIntent = new Intent(getActivity(), ResultActivity.class);
                             startActivity(mainIntent);
