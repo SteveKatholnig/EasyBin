@@ -21,7 +21,6 @@ public class BinomActivity extends AppCompatActivity {
     //Hier wird die Beschriftung der Tabs für das TabMenü festgelegt
     CharSequence titles[] = {"First", "Second", "Third"};
     int numbOfTabs = 3;
-    int usedTheme = 0;
 
     String showAlertKey = "com.easy_binom.easybin.showAlert";
 
@@ -44,7 +43,7 @@ public class BinomActivity extends AppCompatActivity {
         if (showAlert) {
             AlertDialog.Builder builder = new AlertDialog.Builder(BinomActivity.this, R.style.MyAlertDialogStyle);
             builder.setTitle("DISCLAIMER");
-            builder.setMessage(R.string.lorem);
+            builder.setMessage(R.string.disclaimer);
             builder.setPositiveButton("OK", null);
             builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                 @Override

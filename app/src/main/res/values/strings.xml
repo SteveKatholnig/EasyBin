@@ -1,29 +1,33 @@
 <resources>
     <string name="app_name">EasyBinom</string>
+    <string name="result">Result</string>
+    <string name="nullstellen">Nullstellen</string>
 
-    <string name="action_settings">About us</string>
-    <string name="action_settings4">Nullstellen</string>
-    <string name="action_settings2">Female</string>
-    <string name="action_settings3">Male</string>
+    <string name="action_settings_about">About us</string>
+    <string name="action_settings_nullstellen">Nullstellen</string>
+    <string name="action_settings_female">Female</string>
+    <string name="action_settings_male">Male</string>
     <string name="action_back">Back</string>
     <string name="action_info">Info</string>
 
-    <string name="txtView1">(ax+b)²</string>
-    <string name="txtView2">(ax-b)²</string>
-    <string name="txtView3">(ax+b)(ax-b)</string>
+    <string name="aboutUs1">Maike Jansen (Studentin im Bereich Wirtschaftsinformatik an der Dualen Hochschule Karlsruhe)</string>
+    <string name="aboutUs2">Steve Katholnig (Student im Bereich Wirtschaftsinformatik an der Dualen Hochschule Karlsruhe)</string>
+    <string name="aboutUs3">Ricarda Deurer (Studentin im Bereich Wirtschaftsinformatik an der Dualen Hochschule Karlsruhe)</string>
+
+    <string name="binVar1">(ax+b)²</string>
+    <string name="binVar2">(ax-b)²</string>
+    <string name="binVar3">(ax+b)(ax-b)</string>
+    <string name="var1">a= </string>
+    <string name="var2">b= </string>
+    <string name="var3">c= </string>
 
     <string name="errorMessage">Please enter a valid number!</string>
-    <string name="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, STEVE IST DER BESTE sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
-
-    <string name="result">Result</string>
-    <string name="nullstellen">Nullstellen</string>
+    <string name="disclaimer">Diese App ist nur zu Testzwecken als Projekt an der DHBW entwickelt worden. Sie macht keinen Sinn aber sieht schön aus.</string>
     <string name="swipeDesc">Swipe down to the bottom to clear all fields!</string>
     <string name="binomDesc1"><b>Erste binomische Formel:</b>\nFür alle, die Klammern ausmultiplizieren können, ist die erste binomische Formel eigentlich nichts neues, auch wenn sie auf den ersten Blick abschreckend wirkt. Denn diese lautet:</string>
     <string name="binomDesc2"><b>Zweite Binomische Formel:</b>\nDie zweite binomische Formel sieht sehr ähnlich aus. Nur hier findet sich nun ein negatives Vorzeichen. Es folgt wieder die Formel samt Herleitung:</string>
     <string name="binomDesc3"><b>Dritte Binomische Formel:</b>\nKommen wir zur dritten - und damit letzten - binomischen Formel. Diese hilft zwei Klammern zu multiplizieren, die wie folgt aussehen:</string>
     <string name="binomDesc4"><b>ABC-Formel:</b>\nDie ABC-Formel, auch Mitternachtsformel genannt, wird zur Berechnung von Nullstellen bei quadratischen Gleichungen \n (F(x) = ax² + bx + c) verwendet.\n
     Sie ähnelt stark der PQ-Formel. Beide Formeln führen zu demselben Ergebnis.</string>
-    <string name="var1">a= </string>
-    <string name="var2">b= </string>
-    <string name="var3">c= </string>
+
 </resources>

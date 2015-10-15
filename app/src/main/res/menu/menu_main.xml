@@ -5,22 +5,22 @@
     <item
         android:id="@+id/action_settings4"
         android:orderInCategory="100"
-        android:title="@string/action_settings4"
+        android:title="@string/action_settings_nullstellen"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="200"
-        android:title="@string/action_settings"
+        android:title="@string/action_settings_about"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_settings2"
         android:orderInCategory="300"
-        android:title="@string/action_settings2"
+        android:title="@string/action_settings_male"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_settings3"
         android:orderInCategory="400"
-        android:title="@string/action_settings3"
+        android:title="@string/action_settings_female"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_info"

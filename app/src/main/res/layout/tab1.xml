@@ -77,7 +77,7 @@
         android:layout_above="@+id/textView12"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10sp"
-        android:text="@string/txtView1"
+        android:text="@string/binVar1"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="25sp" />
 
