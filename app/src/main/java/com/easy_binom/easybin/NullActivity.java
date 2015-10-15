@@ -76,7 +76,7 @@ public class NullActivity extends AppCompatActivity {
                             editText3.setError(getString(R.string.errorMessage));
                         } else {
                             thirdParam = Double.parseDouble((editText3.getText().toString()));
-                            editor.putString(showResultKey, "Your input was: " + editText1.getText().toString() +  "x² + " + editText2.getText().toString() + "x + " + editText3.getText().toString() + "\n" + Abc.formel(firstParam, secondParam, thirdParam));
+                            editor.putString(showResultKey, "Your input was: " + editText1.getText().toString() + "x² + " + editText2.getText().toString() + "x + " + editText3.getText().toString() + "\n" + Abc.formel(firstParam, secondParam, thirdParam));
                             editor.commit();
                             Intent mainIntent = new Intent(NullActivity.this, ResultActivity.class);
                             startActivity(mainIntent);

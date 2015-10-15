@@ -11,23 +11,21 @@ public class Binom {
         double b = y;
 
         //Prüfe ob die eingaben größer oder kleiner den zulässigen werten für double sind.
-        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE){
+        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE) {
             x = 0.0;
-        }
-        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE){
+        } else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE) {
             y = 0.0;
-        }
-        else{
+        } else {
             a = round(x, 1);
             b = round(y, 1);
         }
 
-        double resa = a*a;
-        double resb = 2*a*b;
-        double resc = b*b;
+        double resa = a * a;
+        double resb = 2 * a * b;
+        double resc = b * b;
 
 
-        return "This was the first binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² + " + resb + "x + " + resc + "\n" + Abc.formel(resa,resb,resc);
+        return "This was the first binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² + " + resb + "x + " + resc + "\n" + Abc.formel(resa, resb, resc);
 
     }
 
@@ -37,22 +35,20 @@ public class Binom {
         double b = y;
 
         //Prüfe ob die eingaben größer oder kleiner den zulässigen werten für double sind.
-        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE){
+        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE) {
             x = 0.0;
-        }
-        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE){
+        } else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE) {
             y = 0.0;
-        }
-        else{
+        } else {
             a = round(x, 1);
             b = round(y, 1);
         }
 
-        double resa = a*a;
-        double resb = 2*a*b;
-        double resc = b*b;
+        double resa = a * a;
+        double resb = 2 * a * b;
+        double resc = round(b * b, 1);
 
-        return "This was the second binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² - " + resb + "x + " + resc + "\n" + Abc.formel(resa,-resb,resc);
+        return "This was the second binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² - " + resb + "x + " + resc + "\n" + Abc.formel(resa, -resb, resc);
 
     }
 
@@ -62,22 +58,20 @@ public class Binom {
         double b = y;
 
         //Prüfe ob die eingaben größer oder kleiner den zulässigen werten für double sind.
-        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE){
+        if (x > Double.MAX_VALUE || x < Double.MIN_VALUE) {
             x = 0.0;
-        }
-        else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE){
+        } else if (y > Double.MAX_VALUE || y < Double.MIN_VALUE) {
             y = 0.0;
-        }
-        else{
+        } else {
             a = round(x, 1);
             b = round(y, 1);
         }
 
-        double resa = a*a;
+        double resa = a * a;
         double resb = 0;
-        double resc = b*b;
+        double resc = round(b * b, 1);
 
-        return "This was the third binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² - " + resc + "\n" + Abc.formel(resa,resb,-resc);
+        return "This was the third binom!" + "\n" + "\n" + "Your input was:" + "\n" + "a= " + x + "  b= " + y + "\n" + "\n" + "Result:" + "\n" + resa + "x² - " + resc + "\n" + Abc.formel(resa, resb, -resc);
 
     }
 
