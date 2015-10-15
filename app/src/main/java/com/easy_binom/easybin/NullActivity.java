@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -64,19 +65,28 @@ public class NullActivity extends AppCompatActivity {
                         }
                     }
                 } else {
-                    firstParam = Double.parseDouble(editText1.getText().toString());
                     if (editText2.getText().toString().isEmpty()) {
                         editText2.setError(getString(R.string.errorMessage));
                     } else {
-                        secondParam = Double.parseDouble(editText2.getText().toString());
                         if (editText3.getText().toString().isEmpty()) {
                             editText3.setError(getString(R.string.errorMessage));
                         } else {
-                            thirdParam = Double.parseDouble((editText3.getText().toString()));
-                            editor.putString(showResultKey, "Your input was: " + editText1.getText().toString() + "x² + " + editText2.getText().toString() + "x + " + editText3.getText().toString() + "\n" + Abc.formel(firstParam, secondParam, thirdParam));
-                            editor.commit();
-                            Intent mainIntent = new Intent(NullActivity.this, ResultActivity.class);
-                            startActivity(mainIntent);
+                            try{
+                                firstParam = Double.parseDouble(editText1.getText().toString());
+                                secondParam = Double.parseDouble(editText2.getText().toString());
+                                thirdParam = Double.parseDouble((editText3.getText().toString()));
+                                editor.putString(showResultKey, "Your input was: " + editText1.getText().toString() + "x² + " + editText2.getText().toString() + "x + " + editText3.getText().toString() + "\n" + Abc.formel(firstParam, secondParam, thirdParam));
+                                editor.commit();
+                                Intent mainIntent = new Intent(NullActivity.this, ResultActivity.class);
+                                startActivity(mainIntent);
+                            }catch(NumberFormatException e){
+                                AlertDialog.Builder builder = new AlertDialog.Builder(NullActivity.this, R.style.MyAlertDialogStyle);
+                                builder.setTitle("Don't try it");
+                                builder.setMessage(R.string.numberFormatError);
+                                builder.setPositiveButton("OK", null);
+                                builder.setCancelable(false);
+                                builder.show();
+                            }
                         }
                     }
                 }

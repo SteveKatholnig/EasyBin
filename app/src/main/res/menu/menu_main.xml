@@ -15,12 +15,12 @@
     <item
         android:id="@+id/action_settings2"
         android:orderInCategory="300"
-        android:title="@string/action_settings_male"
+        android:title="@string/action_settings_female"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_settings3"
         android:orderInCategory="400"
-        android:title="@string/action_settings_female"
+        android:title="@string/action_settings_male"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_info"

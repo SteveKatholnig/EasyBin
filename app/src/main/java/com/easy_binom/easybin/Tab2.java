@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -51,15 +52,24 @@ public class Tab2 extends Fragment {
                         editText2.setError(getString(R.string.errorMessage));
                     }
                 } else {
-                    firstParam = Double.parseDouble(editText1.getText().toString());
                     if (editText2.getText().toString().isEmpty()) {
                         editText2.setError(getString(R.string.errorMessage));
                     } else {
-                        secondParam = Double.parseDouble(editText2.getText().toString());
-                        editor.putString(showResultKey, Binom.secondBinom(firstParam, secondParam));
-                        editor.commit();
-                        Intent mainIntent = new Intent(getActivity(), ResultActivity.class);
-                        startActivity(mainIntent);
+                        try{
+                            firstParam = Double.parseDouble(editText1.getText().toString());
+                            secondParam = Double.parseDouble(editText2.getText().toString());
+                            editor.putString(showResultKey, Binom.firstBinom(firstParam, secondParam));
+                            editor.commit();
+                            Intent mainIntent = new Intent(getActivity(), ResultActivity.class);
+                            startActivity(mainIntent);
+                        }catch(NumberFormatException e){
+                            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyAlertDialogStyle);
+                            builder.setTitle("Don't try it");
+                            builder.setMessage(R.string.numberFormatError);
+                            builder.setPositiveButton("OK", null);
+                            builder.setCancelable(false);
+                            builder.show();
+                        }
                     }
                 }
             }

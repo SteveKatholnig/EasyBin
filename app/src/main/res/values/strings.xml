@@ -22,6 +22,8 @@
     <string name="var3">c= </string>
 
     <string name="errorMessage">Please enter a valid number!</string>
+    <string name="numberFormatError">Die Zahl isch zu groß Kerle! Konsti ist doof</string>
+
     <string name="disclaimer">Diese App ist nur zu Testzwecken als Projekt an der DHBW entwickelt worden. Sie macht keinen Sinn aber sieht schön aus.</string>
     <string name="swipeDesc">Swipe down to the bottom to clear all fields!</string>
     <string name="binomDesc1"><b>Erste binomische Formel:</b>\nFür alle, die Klammern ausmultiplizieren können, ist die erste binomische Formel eigentlich nichts neues, auch wenn sie auf den ersten Blick abschreckend wirkt. Denn diese lautet:</string>
