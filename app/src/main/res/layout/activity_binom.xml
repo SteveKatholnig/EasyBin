@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/binLayout">
 
         <com.easy_binom.easybin.SlidingTabLayout
             android:id="@+id/tabs"
