@@ -1,7 +1,6 @@
 package com.easy_binom.easybin;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 public class Tab1 extends Fragment {
@@ -35,6 +35,12 @@ public class Tab1 extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 editText1.setError(null);
                 editText2.setError(null);
+                InputMethodManager inputMethodManager = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
+                try{
+                    inputMethodManager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                }catch (NullPointerException e){
+                    return gestureDetector.onTouchEvent(event);
+                }
                 return gestureDetector.onTouchEvent(event);
             }
         });
@@ -56,14 +62,14 @@ public class Tab1 extends Fragment {
                     if (editText2.getText().toString().isEmpty()) {
                         editText2.setError(getString(R.string.errorMessage));
                     } else {
-                        try{
+                        try {
                             firstParam = Double.parseDouble(editText1.getText().toString());
                             secondParam = Double.parseDouble(editText2.getText().toString());
                             editor.putString(showResultKey, Binom.firstBinom(firstParam, secondParam));
                             editor.commit();
                             Intent mainIntent = new Intent(getActivity(), ResultActivity.class);
                             startActivity(mainIntent);
-                        }catch(NumberFormatException e){
+                        } catch (NumberFormatException e) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.MyAlertDialogStyle);
                             builder.setTitle("Don't try it");
                             builder.setMessage(R.string.numberFormatError);

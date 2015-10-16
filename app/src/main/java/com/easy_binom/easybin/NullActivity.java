@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 public class NullActivity extends AppCompatActivity {
@@ -39,6 +40,14 @@ public class NullActivity extends AppCompatActivity {
             }
 
             public boolean onTouch(View v, MotionEvent event) {
+
+                InputMethodManager inputMethodManager = (InputMethodManager) NullActivity.this.getSystemService(NullActivity.INPUT_METHOD_SERVICE);
+                try{
+                    inputMethodManager.hideSoftInputFromWindow(NullActivity.this.getCurrentFocus().getWindowToken(), 0);
+                }catch (NullPointerException e){
+                    return gestureDetector.onTouchEvent(event);
+                }
+
                 return gestureDetector.onTouchEvent(event);
             }
         });
@@ -71,7 +80,7 @@ public class NullActivity extends AppCompatActivity {
                         if (editText3.getText().toString().isEmpty()) {
                             editText3.setError(getString(R.string.errorMessage));
                         } else {
-                            try{
+                            try {
                                 firstParam = Double.parseDouble(editText1.getText().toString());
                                 secondParam = Double.parseDouble(editText2.getText().toString());
                                 thirdParam = Double.parseDouble((editText3.getText().toString()));
@@ -79,7 +88,7 @@ public class NullActivity extends AppCompatActivity {
                                 editor.commit();
                                 Intent mainIntent = new Intent(NullActivity.this, ResultActivity.class);
                                 startActivity(mainIntent);
-                            }catch(NumberFormatException e){
+                            } catch (NumberFormatException e) {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(NullActivity.this, R.style.MyAlertDialogStyle);
                                 builder.setTitle("Don't try it");
                                 builder.setMessage(R.string.numberFormatError);

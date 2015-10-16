@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 public class Tab2 extends Fragment {
@@ -34,6 +35,12 @@ public class Tab2 extends Fragment {
             public boolean onTouch(View v, MotionEvent event) {
                 editText1.setError(null);
                 editText2.setError(null);
+                InputMethodManager inputMethodManager = (InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE);
+                try{
+                    inputMethodManager.hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 0);
+                }catch (NullPointerException e){
+                    return gestureDetector.onTouchEvent(event);
+                }
                 return gestureDetector.onTouchEvent(event);
             }
         });
