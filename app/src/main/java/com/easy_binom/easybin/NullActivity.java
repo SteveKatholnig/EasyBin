@@ -41,6 +41,9 @@ public class NullActivity extends AppCompatActivity {
 
             public boolean onTouch(View v, MotionEvent event) {
 
+                editText1.setError(null);
+                editText2.setError(null);
+                editText3.setError(null);
                 InputMethodManager inputMethodManager = (InputMethodManager) NullActivity.this.getSystemService(NullActivity.INPUT_METHOD_SERVICE);
                 try{
                     inputMethodManager.hideSoftInputFromWindow(NullActivity.this.getCurrentFocus().getWindowToken(), 0);
