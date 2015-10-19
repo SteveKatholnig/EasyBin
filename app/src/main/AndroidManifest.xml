@@ -39,7 +39,7 @@
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
-            android:windowSoftInputMode="adjustNothing"
+            android:windowSoftInputMode="adjustResize|stateHidden"
             android:theme="@style/AppThemeBase">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,7 +86,7 @@
             android:label="@string/nullstellen"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustNothing"
+            android:windowSoftInputMode="adjustResize|stateHidden"
             android:theme="@style/AppThemeBase">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
